@@ -3,7 +3,7 @@ function Hero() {
     <section className="hero">
 
       <h1>
-        Engineering Tomorrow, Today.
+        Engineering Tomorrow Starts Here.
       </h1>
 
       <h2>
