@@ -27,9 +27,13 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Deploy Container') {
             steps {
-                bat 'docker run -d -p 8081:80 --name aevora-container aevora-app'
+                bat '''
+                docker stop aevora-container || ver > nul
+                docker rm aevora-container || ver > nul
+                docker run -d -p 8081:80 --name aevora-container aevora-app
+                '''
             }
         }
     }
