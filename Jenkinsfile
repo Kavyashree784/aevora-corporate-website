@@ -29,7 +29,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run -d -p 3000:3000 --name aevora-container aevora-app'
+                bat 'docker run -d -p 8081:80 --name aevora-container aevora-app'
             }
         }
     }
